@@ -1,10 +1,10 @@
-# 🏆 Athlos — Flutter Frontend
+#  Athlos — Flutter Frontend
 
 App de gestão de atlética universitária — implementação Flutter pixel-perfect baseada no design Figma.
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 lib/
@@ -25,7 +25,7 @@ lib/
 
 ---
 
-## 🎨 Design System
+##  Design System
 
 ### Cores (hex)
 | Token           | Hex         | Uso                          |
@@ -57,7 +57,7 @@ lib/
 
 ---
 
-## 📱 Telas Implementadas
+##  Telas Implementadas
 
 ### 1. AppNavigator (main.dart)
 Tela de entrada com menu de navegação para todas as telas do app.
@@ -101,7 +101,7 @@ Layout de dois painéis (Sidebar + Content):
 
 ---
 
-## 🧱 Widgets Reutilizáveis
+##  Widgets Reutilizáveis
 
 | Widget          | Descrição                                               |
 |-----------------|---------------------------------------------------------|
@@ -116,7 +116,7 @@ Layout de dois painéis (Sidebar + Content):
 
 ---
 
-## ⚙️ Setup
+##  Setup
 
 ```bash
 # 1. Verificar Flutter
@@ -142,7 +142,7 @@ cached_network_image: ^3.3.0
 
 ---
 
-## 🔄 Navegação
+##  Navegação
 
 ```
 AppNavigator
@@ -159,7 +159,7 @@ AppNavigator
 
 ---
 
-## 📌 Notas de Implementação
+##  Notas de Implementação
 
 - **Sem backend**: todos os dados vêm de `MockData` em `mock_data.dart`
 - **Responsividade**: Admin Dashboard usa `Row` com sidebar fixa (220px) — ideal para tablet/web; mobile usa BottomNav

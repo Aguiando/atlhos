@@ -730,7 +730,7 @@ class _PerfilTab extends StatelessWidget {
                         shape: BoxShape.circle,
                         border: Border.all(color: ext.primaryColor, width: 2.5),
                       ),
-                      child: Center(child: Text('PA', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ext.primaryColor))),
+                      child: Center(child: Text('DA', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ext.primaryColor))),
                     ),
                     Positioned(
                       bottom: 0, right: 0,
