@@ -11,6 +11,7 @@ class PresidentOnboardingScreen extends StatefulWidget {
 }
 
 class _PresidentOnboardingScreenState extends State<PresidentOnboardingScreen> {
+  // Agora só 2 steps: 0 = Criar Atlética, 1 = Personalização
   int _step = 0;
   Color _primaryColor = const Color(0xFF2563EB);
   Color _backgroundColor = const Color(0xFFF8FAFC);
@@ -37,6 +38,7 @@ class _PresidentOnboardingScreenState extends State<PresidentOnboardingScreen> {
     final ext = context.athlos;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: AppBar(
         backgroundColor: ext.surfaceColor,

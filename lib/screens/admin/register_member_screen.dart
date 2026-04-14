@@ -17,6 +17,7 @@ class _RegisterMemberScreenState extends State<RegisterMemberScreen> {
     final roles = ['Diretor', 'Membro', 'Coordenador'];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: AppBar(
         backgroundColor: ext.surfaceColor,

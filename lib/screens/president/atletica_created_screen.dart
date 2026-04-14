@@ -59,13 +59,14 @@ class _AtleticaCreatedScreenState extends State<AtleticaCreatedScreen>
     final ext = context.athlos;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(28),
           child: Column(
             children: [
-              const Spacer(),
+              const SizedBox(height: 16),
 
               // ── Ícone animado ───────────────────────────────────────────
               ScaleTransition(
@@ -175,7 +176,7 @@ class _AtleticaCreatedScreenState extends State<AtleticaCreatedScreen>
                 ),
               ),
 
-              const Spacer(),
+              const SizedBox(height: 32),
 
               // ── Botão ir para login ─────────────────────────────────────
               FadeTransition(

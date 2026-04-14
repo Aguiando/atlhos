@@ -24,6 +24,7 @@ class _UserMainScreenState extends State<UserMainScreen> {
     ];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       body: tabs[_index],
       bottomNavigationBar: Container(
@@ -106,6 +107,7 @@ class _FeedTabState extends State<_FeedTab> {
   Widget build(BuildContext context) {
     final ext = context.athlos;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: _UserAppBar(),
       body: Column(
@@ -292,10 +294,10 @@ class _LojaTab extends StatefulWidget {
 }
 
 class _LojaTabState extends State<_LojaTab> {
-  String _cat = 'Todos os itens';
+  String _cat = 'All Items';
 
   final List<Map<String, dynamic>> _products = const [
-    {'name': 'Caneca da Atlética', 'price': 85.00, 'tag': 'Canecas'}, //Mudar os nomes
+    {'name': 'Caneca da Atlética', 'price': 85.00, 'tag': 'Canecas'},
     {'name': 'Moletom', 'price': 289.90, 'tag': 'Moletons'},
     {'name': 'Jersey', 'price': 119.90, 'tag': 'Jerseys'},
     {'name': 'Bandeira da Atlética', 'price': 45.90, 'tag': 'Acessórios'},
@@ -305,6 +307,7 @@ class _LojaTabState extends State<_LojaTab> {
   Widget build(BuildContext context) {
     final ext = context.athlos;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: _UserAppBar(),
       body: ListView(
@@ -374,7 +377,7 @@ class _LojaTabState extends State<_LojaTab> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               const Text('PROGRAMA DE FIDELIDADE', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w700, color: Colors.white70, letterSpacing: 1.5)),
               const SizedBox(height: 4),
-              const Text('TIGRE PRIME', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white)),
+              const Text('ATHLOS PRIME', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white)),
               const SizedBox(height: 4),
               Text('Acesso antecipado ao novos lançamentos.', style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.8))),
               const SizedBox(height: 12),
@@ -466,6 +469,7 @@ class _AgendaTabState extends State<_AgendaTab> {
   Widget build(BuildContext context) {
     final ext = context.athlos;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: AppBar(
         backgroundColor: ext.surfaceColor,
@@ -613,6 +617,7 @@ class _ParticipantesTab extends StatelessWidget {
     ];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: AppBar(
         backgroundColor: ext.surfaceColor,
@@ -711,6 +716,7 @@ class _PerfilTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final ext = context.athlos;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: _UserAppBar(),
       body: ListView(
@@ -749,7 +755,7 @@ class _PerfilTab extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   decoration: BoxDecoration(color: ext.primaryColor, borderRadius: BorderRadius.circular(20)),
-                  child: const Text('Cargo: Membro', style: TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500)),
+                  child: const Text('Cargo: Membro Comum', style: TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500)),
                 ),
               ],
             ),

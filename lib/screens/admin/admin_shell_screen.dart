@@ -24,6 +24,7 @@ class _AdminShellScreenState extends State<AdminShellScreen> {
   Widget build(BuildContext context) {
     final ext = context.athlos;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       body: _tabs[_tab],
       bottomNavigationBar: Container(
@@ -107,6 +108,7 @@ class _LojaAdminTab extends StatelessWidget {
     ];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: _AdminBar(title: 'GESTÃO DA LOJA'),
       floatingActionButton: FloatingActionButton(
@@ -126,12 +128,6 @@ class _LojaAdminTab extends StatelessWidget {
               Text('Loja da Atlética', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: ext.textPrimary)),
               const SizedBox(height: 4),
               Text('Todos os Itens', style: TextStyle(fontSize: 11, color: ext.textSecondary)),
-              const SizedBox(height: 10),
-              Row(children: [
-                _StatChip(label: '84 vendas', color: const Color(0xFF10B981)),
-                const SizedBox(width: 8),
-                _StatChip(label: '44 itens', color: const Color(0xFFF59E0B)),
-              ]),
               const SizedBox(height: 12),
               // Filter tabs
               SingleChildScrollView(
@@ -221,6 +217,7 @@ class _AgendaAdminTab extends StatelessWidget {
     ];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: _AdminBar(title: 'GESTÃO DA AGENDA'),
       floatingActionButton: FloatingActionButton(
@@ -238,26 +235,11 @@ class _AgendaAdminTab extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               decoration: BoxDecoration(color: ext.surfaceVariant, borderRadius: BorderRadius.circular(6)),
-              child: Text('14/04/2025', style: TextStyle(fontSize: 11, color: ext.textSecondary)),
+              child: Text('14/04/2026', style: TextStyle(fontSize: 11, color: ext.textSecondary)),
             ),
           ]),
           const SizedBox(height: 4),
 
- /*         Row(children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(color: const Color(0xFF10B981).withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
-              child: const Text('4 HOJE', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: Color(0xFF10B981))),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(color: const Color(0xFFF59E0B).withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
-              child: const Text('12 SEMANA', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: Color(0xFFF59E0B))),
-            ),
-          ]),
-          
-  */
           const SizedBox(height: 16),
           ...events.map((e) => _AgendaCard(event: e, ext: ext)).toList(),
         ],
@@ -322,12 +304,13 @@ class _FeedAdminTab extends StatelessWidget {
     final ext = context.athlos;
     final posts = [
       {'title': 'Treino de Basquete: Cancelado. Manutenção na Quadra', 'date': '15 Mai', 'type': 'TREINO', 'typeColor': 0xFF10B981, 'urgent': false},
-      {'title': 'Inter-Atléticas 2025 – Abertura das Inscrições', 'date': '14 Mai', 'type': 'EVENTO', 'typeColor': 0xFFF59E0B, 'urgent': true},
+      {'title': 'Inter-Atléticas 2026 – Abertura das Inscrições', 'date': '14 Mai', 'type': 'EVENTO', 'typeColor': 0xFFF59E0B, 'urgent': true},
       {'title': 'Novos Uniformes: Disponíveis para membros Tigre Prime', 'date': '14 Mai', 'type': 'AVISO', 'typeColor': 0xFF2563EB, 'urgent': false},
       {'title': 'Preparação Física: Treinamento Técnico na Tarde', 'date': '16 Mai', 'type': 'TREINO', 'typeColor': 0xFF10B981, 'urgent': false},
     ];
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: _AdminBar(title: 'GESTÃO DO FEED'),
       floatingActionButton: FloatingActionButton(
@@ -433,6 +416,7 @@ class _MembrosAdminTabState extends State<_MembrosAdminTab> {
     final ext = context.athlos;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: ext.backgroundColor,
       appBar: AppBar(
         backgroundColor: ext.surfaceColor,
@@ -463,7 +447,7 @@ class _MembrosAdminTabState extends State<_MembrosAdminTab> {
                 );
               },
               icon: const Icon(Icons.person_add, size: 13, color: Colors.white),
-              label: const Text('Add New Member',
+              label: const Text('Add Novo Membro',
                 style: TextStyle(fontSize: 11, color: Colors.white)),
               style: ElevatedButton.styleFrom(
                 backgroundColor: ext.primaryColor,
